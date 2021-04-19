@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
   entry: {
     // This is our Express server for Dynamic universal
-    server: './server.ts'
+    server: ['./src/polyfills.ts', './server.ts']
   },
   target: 'node',
   mode: 'development',

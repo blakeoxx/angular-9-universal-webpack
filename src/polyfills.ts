@@ -59,6 +59,10 @@
  */
 import 'zone.js/dist/zone'; // Included with Angular CLI.
 
+// IMPORTANT: This import is needed during webpack serving in order to resolve ApplicationModule params
+import 'reflect-metadata';
+import 'core-js/es/reflect';
+
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */

@@ -1,8 +1,5 @@
 import 'zone.js/dist/zone-node';
 
-// IMPORTANT: This import is needed during webpack serving in order to resolve ApplicationModule params
-import 'reflect-metadata';
-
 import { ngExpressEngine } from '@nguniversal/express-engine';
 import * as express from 'express';
 import { join } from 'path';
