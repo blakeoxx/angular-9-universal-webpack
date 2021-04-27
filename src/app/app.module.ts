@@ -17,6 +17,7 @@ import { MessagesComponent }    from './messages/messages.component';
 
 import { PLATFORM_ID, APP_ID, Inject } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { isPlatformBrowser } from '@angular/common';
     HeroesComponent,
     HeroDetailComponent,
     MessagesComponent,
-    HeroSearchComponent
+    HeroSearchComponent,
+    PageNotFoundComponent
   ],
   bootstrap: [ AppComponent ]
 })
