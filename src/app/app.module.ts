@@ -17,6 +17,7 @@ import { MessagesComponent }    from './messages/messages.component';
 
 import { PLATFORM_ID, APP_ID, Inject } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import { SiteMapComponent } from './site-map/site-map.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
@@ -42,6 +43,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     HeroDetailComponent,
     MessagesComponent,
     HeroSearchComponent,
+	SiteMapComponent,
     PageNotFoundComponent,
   ],
   bootstrap: [ AppComponent ]
