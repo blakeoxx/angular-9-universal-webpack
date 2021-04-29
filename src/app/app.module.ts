@@ -11,8 +11,8 @@ import { AppRoutingModule }     from './app-routing.module';
 import { AppComponent }         from './app.component';
 import { DashboardComponent }   from './dashboard/dashboard.component';
 import { HeroDetailComponent }  from './hero-detail/hero-detail.component';
-import { HeroesComponent }      from './heroes/heroes.component';
 import { HeroSearchComponent }  from './hero-search/hero-search.component';
+import { HeroesModule }  from './heroes/heroes.module';
 import { MessagesComponent }    from './messages/messages.component';
 
 import { PLATFORM_ID, APP_ID, Inject } from '@angular/core';
@@ -24,7 +24,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
   imports: [
     BrowserModule.withServerTransition({ appId: 'tour-of-heroes' }),
     FormsModule,
-    AppRoutingModule,
+	HeroesModule,
+    AppRoutingModule,	// Make sure app routing comes after all feature routing modules,
+						//   otherwise wildcard routes will override them
     HttpClientModule,
 
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
@@ -37,11 +39,10 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
   declarations: [
     AppComponent,
     DashboardComponent,
-    HeroesComponent,
     HeroDetailComponent,
     MessagesComponent,
     HeroSearchComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
   ],
   bootstrap: [ AppComponent ]
 })
